@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />"
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="" class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Web Developer</p>
+                    <h1>Hi, I'm <span>Sthiti</span><br>Panda from India.</h1>
+                </div>
+            </div>
+        </div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images\IMG_20220922_191516_205.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br>
+                <p>Hello World!<br>I'm Sthiti Panda, a Front-End Web Developer from India and I enjoy creating things that live on internet. My passion for design started when I realised how much impact my that design project was going to contribute to an entrepreneur's business. I create custom websites to help businesses do better online.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>2022-2023</span><br>Web Development Training at GIET University</li>
+                        <li><span>2023-Current</span><br>Internship at CodSoft.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>2023</span><br>UI/UX Design Training at ET Institute</li>
+                        <li><span>2023</span><br>BCA from GIET University</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+    <div>
+        <h2>Web Design</h2>
+        <p>Web Design ecompasses many different skills and disciplines in the production and maintenance of websites. The different areas of web design include web graphic design,user interface design,authoring and search engine optimization.</p>
+        <a href="#">Learn more</a>
+    </div>
+    <div>
+            <h2>UI/UX Design</h2>
+            <p>UX design focuses on creating a seamless and meaningful user experience by understanding user needs,conducting research and designing intuitive interfaces. While UI design focuses on the visual,interactive elements of a product to create aesthetically-pleasing interfaces.</p>
+            <a href="#">Learn more</a>
+    </div>
+    <div>
+        <h2>App Design</h2>
+        <p>App Design is the look and feel of a mobile application. This includes all of the visual elements and interactive elements that impact how the app functions. Mobile app design combines two concepts- UI and UX.</p>
+        <a href="#">Learn more</a>
+    </div> 
+</div>
+<script>
+    var tablinks = document.getElementByClassName("tab-links");
+    var tabcontents = document.getElementByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<section class="contact">
+    <div class="contact-form" id="contact">
+    <h1>Contact<span>Us</span></h1>
+    <p>Connect with me via phone:38927097187 or email:sthiti@gmail.com</p>
+    <form action="">
+        <input type="" placeholder="Your Name" required>
+        <input type="email" name="email" id="email" placeholder="E-mail" required>
+        <input type="" placeholder="Write a subject" required>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" required>
+    </textarea>
+    <input type="Submit" name="" value="Submit" class="btn">
+    </form>
+    </div>
+</section>
+<footer>
+    <p>For more knowledge.Please click on the link below:</p>
+    <div class="social-media">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+    <pclass="end">CopyRight By Sthiti Panda</p>
+</footer>
+    </body>
+</html>
+
+
+
+#style.css
+
+/*-----------------------------------------------*/
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poopins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    color:white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/IMG-20240411-WA0030.jpg);
+    background-size: cover;
+    background-position: center ;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:blue;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;   
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color:#ff004f;
+}
+/*-----------------------about---------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width:100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size:60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff004;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(250px, 1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+}
+section{
+    padding: 40px 15%;
+}
+.contact{
+   background: #101010 ;
+   height: 100%;
+   width: 100%;
+   min-height:100vh;
+   display: grid;
+   grid-template-columns: repeat(2,2fr);
+   align-items: center;
+   grid-gap: 6rem;
+}
+
+.contact-form h1{
+    font-size: 80px;
+    color:#fff;
+    margin-bottom: 20px;
+}
+
+span{
+    color:#3e00f9;
+}
+.contact-form p{
+    color: #c6c9d8bf;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+.contact-form form{
+    position: relative;
+
+
+}
+.contact-form form input,
+form textarea{
+    width:100%;
+    padding: 17px;
+    border: none;
+    outline: #191919;
+    color:#858585;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+.contact-form form .btn{ 
+    display: inline-block;
+    background: #000000;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
+    cursor: pointer;
+
+}
+.contact-form form .btn:hover{
+    border: 2px solid #0a04c4;
+    background: transparent;
+    transform: scale(1.1);
+
+}
+
+@media (max-width:1570px){
+    section{
+        padding:80px 3%;
+        transition: .2s;
+    }
+    .contact-form h1{
+        font-size: 60px;
+    }
+    .contact-form p{
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width:1090px){
+    .contact{
+        grid-gap: 2rem;
+        transition: .3s;
+    }
+}
+@media (max-width:1000px){
+    .contact{
+        grid-template-columns: 1fr;
+    }
+    .contact-form{
+        order: 2;
+    }
+}
+footer {
+    position: relative;
+    width:100%;
+    height:400px;
+    display: flex;
+    background: #101010;
+    display :flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    
+}
+footer p:nth-child(1) {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+.social-media{
+    display:flex;
+}
+.social-media a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1b05e4;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+.social-media a:hover{
+    transform: scale(1.3);
+    transition: .3s ;
+
+}
+.end{
+
+position: absolute;
+color: #2500f9;
+bottom: 35px;
+font-size: 14px;
+}
+
